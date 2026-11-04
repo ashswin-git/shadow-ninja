@@ -13,53 +13,87 @@ mouse_filter = 2
 script = ExtResource("1_touch")
 
 [node name="LeftButton" type="Button" parent="."]
-modulate = Color(0.9, 0.9, 1, 0.65)
-layout_mode = 0
+modulate = Color(0.9, 0.9, 1, 0.75)
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
 offset_left = 40.0
-offset_top = 500.0
-offset_right = 140.0
-offset_bottom = 600.0
+offset_top = -140.0
+offset_right = 136.0
+offset_bottom = -44.0
+grow_vertical = 0
 theme_override_font_sizes/font_size = 36
-text = "◀"
+text = "<"
 
 [node name="RightButton" type="Button" parent="."]
-modulate = Color(0.9, 0.9, 1, 0.65)
-layout_mode = 0
+modulate = Color(0.9, 0.9, 1, 0.75)
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
 offset_left = 155.0
-offset_top = 500.0
-offset_right = 255.0
-offset_bottom = 600.0
+offset_top = -140.0
+offset_right = 251.0
+offset_bottom = -44.0
+grow_vertical = 0
 theme_override_font_sizes/font_size = 36
-text = "▶"
+text = ">"
 
 [node name="JumpButton" type="Button" parent="."]
-modulate = Color(0.2, 0.9, 0.4, 0.75)
-layout_mode = 0
-offset_left = 1130.0
-offset_top = 500.0
-offset_right = 1240.0
-offset_bottom = 600.0
-theme_override_font_sizes/font_size = 22
+modulate = Color(0.2, 0.9, 0.4, 0.85)
+custom_minimum_size = Vector2(110, 96)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -140.0
+offset_right = -40.0
+offset_bottom = -44.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 24
 text = "JUMP"
 
 [node name="DashButton" type="Button" parent="."]
-modulate = Color(0.2, 0.7, 1, 0.75)
-layout_mode = 0
-offset_left = 1010.0
-offset_top = 500.0
-offset_right = 1120.0
-offset_bottom = 600.0
-theme_override_font_sizes/font_size = 22
+modulate = Color(0.2, 0.7, 1, 0.85)
+custom_minimum_size = Vector2(110, 96)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -275.0
+offset_top = -140.0
+offset_right = -165.0
+offset_bottom = -44.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 24
 text = "DASH"
 
 [node name="ThrowButton" type="Button" parent="."]
-modulate = Color(1, 0.6, 0.2, 0.75)
-layout_mode = 0
-offset_left = 1070.0
-offset_top = 380.0
-offset_right = 1180.0
-offset_bottom = 480.0
-theme_override_font_sizes/font_size = 22
+modulate = Color(1, 0.6, 0.2, 0.85)
+custom_minimum_size = Vector2(110, 96)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -275.0
+offset_top = -250.0
+offset_right = -165.0
+offset_bottom = -154.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 24
 text = "THROW"
 
 [connection signal="button_down" from="LeftButton" to="." method="_on_left_pressed"]
@@ -68,5 +102,7 @@ text = "THROW"
 [connection signal="button_up" from="RightButton" to="." method="_on_right_released"]
 [connection signal="button_down" from="JumpButton" to="." method="_on_jump_pressed"]
 [connection signal="button_up" from="JumpButton" to="." method="_on_jump_released"]
-[connection signal="pressed" from="DashButton" to="." method="_on_dash_pressed"]
-[connection signal="pressed" from="ThrowButton" to="." method="_on_throw_pressed"]
+[connection signal="button_down" from="DashButton" to="." method="_on_dash_pressed"]
+[connection signal="button_up" from="DashButton" to="." method="_on_dash_released"]
+[connection signal="button_down" from="ThrowButton" to="." method="_on_throw_pressed"]
+[connection signal="button_up" from="ThrowButton" to="." method="_on_throw_released"]

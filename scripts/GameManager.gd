@@ -7,8 +7,16 @@ var unlocked_level: int = 1
 var level_stars: Dictionary = {} # level_num -> int (0-3)
 var total_coins: int = 0
 
+var audio_pool: Array[AudioStreamPlayer] = []
+var pool_index: int = 0
+const POOL_SIZE = 8
+
 func _ready() -> void:
 	load_game()
+	for i in range(POOL_SIZE):
+		var p = AudioStreamPlayer.new()
+		add_child(p)
+		audio_pool.append(p)
 
 func save_game() -> void:
 	var data = {
@@ -33,7 +41,7 @@ func load_game() -> void:
 					total_coins = data.get("total_coins", 0)
 
 func complete_level(lvl: int, stars: int, coins: int) -> void:
-	if lvl > unlocked_level and lvl <= 12:
+	if lvl >= unlocked_level and lvl <= 12:
 		unlocked_level = lvl + 1
 	var prev_stars = level_stars.get(str(lvl), 0)
 	if stars > prev_stars:
@@ -42,10 +50,9 @@ func complete_level(lvl: int, stars: int, coins: int) -> void:
 	save_game()
 
 func play_sfx(name: String) -> void:
-	var player = AudioStreamPlayer.new()
 	var path = "res://assets/audio/" + name + ".wav"
 	if ResourceLoader.exists(path):
+		var player = audio_pool[pool_index]
+		pool_index = (pool_index + 1) % POOL_SIZE
 		player.stream = load(path)
-		add_child(player)
 		player.play()
-		player.finished.connect(func(): player.queue_free())
