@@ -13,53 +13,53 @@ mouse_filter = 2
 script = ExtResource("1_touch")
 
 [node name="LeftButton" type="Button" parent="."]
-modulate = Color(1, 1, 1, 0.5)
+modulate = Color(0.9, 0.9, 1, 0.65)
 layout_mode = 0
-offset_left = 50.0
-offset_top = 580.0
-offset_right = 130.0
-offset_bottom = 660.0
-theme_override_font_sizes/font_size = 32
+offset_left = 40.0
+offset_top = 500.0
+offset_right = 140.0
+offset_bottom = 600.0
+theme_override_font_sizes/font_size = 36
 text = "◀"
 
 [node name="RightButton" type="Button" parent="."]
-modulate = Color(1, 1, 1, 0.5)
+modulate = Color(0.9, 0.9, 1, 0.65)
 layout_mode = 0
-offset_left = 150.0
-offset_top = 580.0
-offset_right = 230.0
-offset_bottom = 660.0
-theme_override_font_sizes/font_size = 32
+offset_left = 155.0
+offset_top = 500.0
+offset_right = 255.0
+offset_bottom = 600.0
+theme_override_font_sizes/font_size = 36
 text = "▶"
 
 [node name="JumpButton" type="Button" parent="."]
-modulate = Color(1, 1, 1, 0.5)
+modulate = Color(0.2, 0.9, 0.4, 0.75)
 layout_mode = 0
-offset_left = 1150.0
-offset_top = 580.0
-offset_right = 1230.0
-offset_bottom = 660.0
-theme_override_font_sizes/font_size = 24
+offset_left = 1130.0
+offset_top = 500.0
+offset_right = 1240.0
+offset_bottom = 600.0
+theme_override_font_sizes/font_size = 22
 text = "JUMP"
 
 [node name="DashButton" type="Button" parent="."]
-modulate = Color(1, 1, 1, 0.5)
+modulate = Color(0.2, 0.7, 1, 0.75)
 layout_mode = 0
-offset_left = 1050.0
-offset_top = 480.0
-offset_right = 1130.0
-offset_bottom = 560.0
-theme_override_font_sizes/font_size = 24
+offset_left = 1010.0
+offset_top = 500.0
+offset_right = 1120.0
+offset_bottom = 600.0
+theme_override_font_sizes/font_size = 22
 text = "DASH"
 
 [node name="ThrowButton" type="Button" parent="."]
-modulate = Color(1, 1, 1, 0.5)
+modulate = Color(1, 0.6, 0.2, 0.75)
 layout_mode = 0
-offset_left = 1150.0
-offset_top = 480.0
-offset_right = 1230.0
-offset_bottom = 560.0
-theme_override_font_sizes/font_size = 24
+offset_left = 1070.0
+offset_top = 380.0
+offset_right = 1180.0
+offset_bottom = 480.0
+theme_override_font_sizes/font_size = 22
 text = "THROW"
 
 [connection signal="button_down" from="LeftButton" to="." method="_on_left_pressed"]
