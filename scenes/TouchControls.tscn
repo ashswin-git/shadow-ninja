@@ -1,0 +1,72 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/TouchControls.gd" id="1_touch"]
+
+[node name="TouchControls" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_touch")
+
+[node name="LeftButton" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0.5)
+layout_mode = 0
+offset_left = 50.0
+offset_top = 580.0
+offset_right = 130.0
+offset_bottom = 660.0
+theme_override_font_sizes/font_size = 32
+text = "◀"
+
+[node name="RightButton" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0.5)
+layout_mode = 0
+offset_left = 150.0
+offset_top = 580.0
+offset_right = 230.0
+offset_bottom = 660.0
+theme_override_font_sizes/font_size = 32
+text = "▶"
+
+[node name="JumpButton" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0.5)
+layout_mode = 0
+offset_left = 1150.0
+offset_top = 580.0
+offset_right = 1230.0
+offset_bottom = 660.0
+theme_override_font_sizes/font_size = 24
+text = "JUMP"
+
+[node name="DashButton" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0.5)
+layout_mode = 0
+offset_left = 1050.0
+offset_top = 480.0
+offset_right = 1130.0
+offset_bottom = 560.0
+theme_override_font_sizes/font_size = 24
+text = "DASH"
+
+[node name="ThrowButton" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0.5)
+layout_mode = 0
+offset_left = 1150.0
+offset_top = 480.0
+offset_right = 1230.0
+offset_bottom = 560.0
+theme_override_font_sizes/font_size = 24
+text = "THROW"
+
+[connection signal="button_down" from="LeftButton" to="." method="_on_left_pressed"]
+[connection signal="button_up" from="LeftButton" to="." method="_on_left_released"]
+[connection signal="button_down" from="RightButton" to="." method="_on_right_pressed"]
+[connection signal="button_up" from="RightButton" to="." method="_on_right_released"]
+[connection signal="button_down" from="JumpButton" to="." method="_on_jump_pressed"]
+[connection signal="button_up" from="JumpButton" to="." method="_on_jump_released"]
+[connection signal="pressed" from="DashButton" to="." method="_on_dash_pressed"]
+[connection signal="pressed" from="ThrowButton" to="." method="_on_throw_pressed"]

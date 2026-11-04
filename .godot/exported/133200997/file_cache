@@ -1,0 +1,13 @@
+res://scenes/Boss.tscn::c5675b0a00d9d84d68b207d647bf5b00::1793808322::res://.godot/exported/133200997/export-3afb77140cdc0a8456d3f279d0154dda-Boss.scn
+res://scenes/Checkpoint.tscn::b98d3a054ef637073e76de005ec46709::1793808324::res://.godot/exported/133200997/export-0ae68ea63abd192fe7fa49d390f2b3e1-Checkpoint.scn
+res://scenes/Coin.tscn::899e91aaa95dc7f7e7fca4220eff6ce1::1793808323::res://.godot/exported/133200997/export-84eb3c9e60cf06d76a09ab53221af43e-Coin.scn
+res://scenes/Enemy.tscn::46bd64d2c866499090babb901dfaa073::1793808320::res://.godot/exported/133200997/export-e8b868f745946f74f22434b9ddd0af8d-Enemy.scn
+res://scenes/Level.tscn::89dcf5eaa1f341a459c6ab93f4499fa1::1793808342::res://.godot/exported/133200997/export-efc91dfb3eae5c85fe69be7afcad9576-Level.scn
+res://scenes/LevelSelect.tscn::fa668ba745315ab864c1091c3f34dc27::1793808331::res://.godot/exported/133200997/export-889a4a75eb171efc9b1d9b552ff482e1-LevelSelect.scn
+res://scenes/MainMenu.tscn::bbfdd9096f19a18396122fd1fe19c3f9::1793808329::res://.godot/exported/133200997/export-23c8b2a48d59a0cd018bd8ad5ce7794c-MainMenu.scn
+res://scenes/PauseMenu.tscn::66c2bd184bebc61492903dbc747c6a2b::1793808334::res://.godot/exported/133200997/export-322493d365676aa8c0336579f6935b26-PauseMenu.scn
+res://scenes/Player.tscn::8c5c698f8a61dda2ccbf0d409cb5099e::1793808319::res://.godot/exported/133200997/export-e8220e74d1354b9e6b168b513689419c-Player.scn
+res://scenes/Portal.tscn::282e1a157e83caf5c2a03ca2fc2a285e::1793808326::res://.godot/exported/133200997/export-a33b7994ac14a66523ae0f526d86826c-Portal.scn
+res://scenes/Shuriken.tscn::0eae5d82e6d3b0381c063bb348c2dec8::1793808317::res://.godot/exported/133200997/export-53905498921540489568ec160451d54a-Shuriken.scn
+res://scenes/TouchControls.tscn::6cdf2b36dbe74c6ad5296078742dfdfd::1793808336::res://.godot/exported/133200997/export-48a05f73766bce7df84b6d2136ef34a2-TouchControls.scn
+res://scenes/Trap.tscn::603669d3d30864559e9ea00430602b40::1793808327::res://.godot/exported/133200997/export-dc1073f36dddaec5080cd0e667c0c8c9-Trap.scn
