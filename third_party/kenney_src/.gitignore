@@ -1,0 +1,13 @@
+# Keep only the CC0 Kenney files the art pass actually samples (full packs stay local).
+*
+!.gitignore
+!.gdignore
+!*/
+!fantasy-ui-borders/License.txt
+!fantasy-ui-borders/PNG/Double/Border/*.png
+!fantasy-ui-borders/PNG/Double/Divider/*.png
+!fantasy-ui-borders/PNG/Double/Divider Fade/*.png
+!fantasy-ui-borders/PNG/Default/Border/*.png
+!ui-pack/License.txt
+!ui-pack/PNG/Grey/Double/star.png
+!ui-pack/PNG/Grey/Double/arrow_decorative_e.png

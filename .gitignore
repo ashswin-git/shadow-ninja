@@ -1,0 +1,55 @@
+# Signing / secrets — never commit these
+keystore/
+*.jks
+*.keystore
+keystore.properties
+.env
+.env.*
+**/gluapi*
+local.properties
+android/local.properties
+
+# Godot import cache and editor state
+.godot/
+.import/
+
+# Build outputs and packages (APKs go on GitHub Releases, not in git)
+build/
+dist/
+*.apk
+*.aab
+*.idsig
+*.pck
+
+# Android / Gradle intermediates and local SDK
+android/build/
+android/.gradle/
+android/assets/
+android/libs/
+android/assetPacks/**/build/
+.gradle/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Editor / OS / agent leftovers
+.DS_Store
+*~
+*.swp
+.claude/
+
+# Third-party App Store screenshots used only as layout reference (not shipped)
+reference/ninja_arashi2/
+reference/**/appstore_*.jpg
+reference/**/appstore_*.jpg.import
+
+# Playtest / capture videos (binaries; stills may be kept)
+ui-mockups/*.mp4
+ui-mockups/**/*.mp4
+
+# Third-party store screenshots under ui-mockups as well
+ui-mockups/reference/appstore_*.jpg
+ui-mockups/reference/appstore_*.jpg.import

@@ -103,8 +103,8 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "• Move: A / D or Left / Right Arrows
 • Jump / Double Jump: Space / W / Up Arrow
-• Dash: K or Shift
-• Throw Shuriken: J
+• Slash: J    • Dash: Shift / I
+• Kunai: K    • DOMAIN: L
 • Pause: Esc"
 horizontal_alignment = 1
 

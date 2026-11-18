@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene load_steps=5 format=3]
 
 [ext_resource type="Script" path="res://scripts/Enemy.gd" id="1_enemy"]
-[ext_resource type="Texture2D" uid="uid://enemy" path="res://assets/sprites/enemy_patrol.png" id="2_tex"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemy_oni.png" id="2_tex"]
+[ext_resource type="Script" path="res://scripts/anim/creature_animator.gd" id="3_anim"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
 size = Vector2(32, 48)
@@ -11,7 +12,15 @@ collision_layer = 4
 collision_mask = 1
 script = ExtResource("1_enemy")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Animator" type="Node2D" parent="."]
+script = ExtResource("3_anim")
+feet_y = 28.0
+
+[node name="Body" type="Node2D" parent="Animator"]
+position = Vector2(0, 28)
+
+[node name="Sprite2D" type="Sprite2D" parent="Animator/Body"]
+position = Vector2(0, -28)
 texture = ExtResource("2_tex")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

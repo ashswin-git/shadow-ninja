@@ -1,15 +1,20 @@
 [application]
 
 config/name="Shadow Ninja"
+config/version="1.2.0"
+run/max_fps=0
 run/main_scene="res://scenes/MainMenu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://assets/sprites/player_idle.png"
+config/icon="res://assets/ui/icon_512.png"
 
 [autoload]
 
 GameManager="*res://scripts/GameManager.gd"
+ContentPack="*res://scripts/ContentPack.gd"
 
 [display]
+
+window/vsync/vsync_mode=1
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
@@ -52,3 +57,13 @@ pause={
 2d_physics/layer_4="Projectiles"
 2d_physics/layer_5="Items"
 2d_physics/layer_6="Traps"
+
+[rendering]
+
+textures/vram_compression/import_etc2_astc=true
+renderer/rendering_method.mobile="gl_compatibility"
+
+[physics]
+
+common/physics_interpolation=true
+common/physics_jitter_fix=0.0

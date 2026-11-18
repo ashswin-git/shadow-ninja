@@ -1,0 +1,16 @@
+{
+  "name": "Aether Shinobi Original Pack",
+  "version": "1.0.0",
+  "author": "Ashwini",
+  "title": "Aether Shinobi: Spirit Blade",
+  "theme": "Anime Action Platformer",
+  "palette": {
+    "deep_indigo": "#120d26",
+    "cursed_blue": "#3b82f6",
+    "cursed_violet": "#8b5cf6",
+    "spirit_red": "#ef4444",
+    "neon_cyan": "#06b6d4"
+  },
+  "font": "res://content/original/fonts/OpenSauceSans-Regular.ttf",
+  "font_bold": "res://content/original/fonts/OpenSauceSans-Bold.ttf"
+}
